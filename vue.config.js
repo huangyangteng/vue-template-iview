@@ -1,5 +1,5 @@
 //vue.config.js
-let host = require('./src/config/host')
+let DEV_SERVER = 'http://localhost:8022'
 
 module.exports = {
     devServer: {
@@ -8,7 +8,7 @@ module.exports = {
         proxy: {
             //配置接口转发
             '/api': {
-                target: host.dev, //开发环境后端接口地址
+                target: DEV_SERVER, //开发环境后端接口地址
                 changeOrigin: true,
                 autoRewrite: true,
                 cookieDomainRewrite: true,
